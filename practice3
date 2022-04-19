@@ -2,3 +2,59 @@
 !) creating new columns to make operations
 2) make operations
 3) save in new columns
+4) math operators>
+ +    -- addition
+-     -- subtraction
+*     -- multiplication
+
+/   -- integer division
+%    -- modulo division
+/  -- decimal division
+
+ ^         -- exponentiation
+ |/ 10         -- square root (operator)
+sqrt(10)     -- square root (function)
+ ||/        -- cube root
+factorial(4)  -- factorial (function)
+ 4 !          -- factorial (operator; PostgreSQL 13 and earlier only)
+ 
+ -- Listing 6-8: Calculating percent change
+
+CREATE TABLE percent_change (
+    department text,
+    spend_2019 numeric(10,2),
+    spend_2022 numeric(10,2)
+);
+
+INSERT INTO percent_change
+VALUES
+    ('Assessor', 178556, 179500),
+    ('Building', 250000, 289000),
+    ('Clerk', 451980, 650000),
+    ('Library', 87777, 90001),
+    ('Parks', 250000, 223000),
+    ('Water', 199000, 195000);
+
+SELECT department,
+       spend_2019,
+       spend_2022,
+       round( (spend_2022 - spend_2019) /
+                    spend_2019 * 100, 1) AS pct_change
+FROM percent_change;
+
+
+-- Listing 6-10: Testing SQL percentile functions
+
+CREATE TABLE percentile_test (
+    numbers integer
+);
+
+INSERT INTO percentile_test (numbers) VALUES
+    (1), (2), (3), (4), (5), (6);
+
+SELECT
+    percentile_cont(.5)
+    WITHIN GROUP (ORDER BY numbers),
+    percentile_disc(.5)
+    WITHIN GROUP (ORDER BY numbers)
+FROM percentile_test;
