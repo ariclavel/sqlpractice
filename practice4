@@ -1,0 +1,22 @@
+JOIN/INNER JOIN ON id > mismo id
+JOIN/INNER JOIN USING (id) > mismo id
+
+select especific values > employees.id, city.name or e.id, c.name from employees as e join city as c
+
+|| concatenate strings > employees.id || " " ||  city.name or e.id
+
+right join: all the values of de the right column (could be nulls)
+left join: same but with left table
+
+full/full outer join: left + right
+
+cross join: todas las combinaciones posibles sin los null (una tabla con todos los records de la otra tabla)
+
+
+MISMOS ATRIBUTOS MISMA CANTIDAD DE TABLES:
+union: combinacion de datos unicos de dos tablas
+union all: combinacion de todos los datos de dos tablas
+except : primera menos segunda
+intersect: primera coincide segunda
+
+ON: multiple conditions
