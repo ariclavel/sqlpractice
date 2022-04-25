@@ -1,0 +1,14 @@
+PRIMART KEY is unique and necessary value for insert 
+PRIMARY KEY can be composed of more than one column
+Can t be duplicated
+
+We can order by timestamp with the time zone > order_time timestamp with time zone,
+
+GENERATED ALWAYS> necessary
+
+ALTER TABLE> modificates tables
+
+analyse > database plan
+
+CREATING INDEXES
+create index nombre on table (column)
