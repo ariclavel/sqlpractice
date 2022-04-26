@@ -1,0 +1,27 @@
+finding duplicates
+having count (*) < 1
+
+find data with null values
+usea nulls first in order by
+use group and count
+
+constraints for some columns zip, phone
+zip lenght must be 5
+
+
+create backup table
+CREATE TABLE meat_poultry_egg_establishments_backup AS
+SELECT * FROM meat_poultry_egg_establishments;
+add new column with alter table
+update original table and copy values of new column
+
+challenge
+create a new table with query to make that with better performance
+
+to delete duplicates
+query with min or max values that we prefer
+
+
+transactions
+commit
+problem> rollback
