@@ -1,0 +1,12 @@
+--sub query
+in from
+in join
+as part of the main select as another table
+
+exists>
+if an element exists
+for lateral subqueries
+
+with temporal table name WITH
+as subquery
+
