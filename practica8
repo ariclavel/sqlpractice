@@ -1,0 +1,10 @@
+--Correspond to chapter 12 Date and Time
+Date > full date
+time
+intervals
+
+Operations> order by date 
+> +"1 day"::interval
+sum, rest
+
+challenge difference between dates
